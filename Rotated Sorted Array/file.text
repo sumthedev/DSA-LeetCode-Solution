@@ -1,0 +1,14 @@
+My logic For Rotated Sorted array
+
+You need to check which side of the array is sorted. In a rotated sorted array, one side — either the left or the right — is always sorted, that’s guaranteed.
+First, we identify the sorted side, and based on that, we decide whether to search on the left or the right side.
+
+For example, take this array:
+[4, 5, 6, 7, 0, 1, 2]
+If mid = 3 (value = 7), compare it with the start of the array.
+If arr[start] <= arr[mid], that means the left side is sorted.
+If not, then the right side is sorted.
+
+Once you know which side is sorted, you can apply binary search accordingly.
+
+I hope this helps! It took me 2 days to fully understand this logic.
