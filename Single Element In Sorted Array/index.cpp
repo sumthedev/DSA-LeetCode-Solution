@@ -3,11 +3,12 @@
 class Solution {
 public:
     int singleNonDuplicate(vector<int>& A) {
-        int n = A.size() -1;
+        int n = A.size();
+       
+        if(n == 1) return A[0];
+
         int st = 0;
         int end = n-1;
-
-        if(n==1) return A[0];
 
         while(st <= end) {
             int mid = st + (end - st)/2;
@@ -18,21 +19,22 @@ public:
             };
 
             if(mid%2 == 0){ 
-                if(A[mid-1] == mid) {
+                if(A[mid-1] == A[mid]) {
                     end = mid - 1;
                 } else {
                     st = mid+1;
                 }
 
             } else {
-                 if(A[mid-1] == mid) {
+                 if(A[mid-1] == A[mid]) {
                       st = mid+1;
                 } else {
                      end = mid - 1;
                 }
             }
         }
-         return -1;
+      
+      return -1;
 
     }
 };
