@@ -1,4 +1,4 @@
-//Problem 706 Binary Search y Recursion
+//Problem 706 Binary Search By Recursion
 
 class Solution {
 public:
