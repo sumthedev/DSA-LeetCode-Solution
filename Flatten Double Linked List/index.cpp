@@ -19,7 +19,7 @@ public:
 
      Node* curr = head;
 
-     while(curr->next != NULL) {
+     while(curr != NULL) {
         if(curr->child != NULL) {
           // flatten the child node 
           Node* next = curr->next;
